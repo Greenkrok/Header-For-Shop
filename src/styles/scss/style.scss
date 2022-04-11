@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import './global/variables';
+@import './components/header';
+
+body, html {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+button {
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    @extend %flexible_between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    @extend %flexible_between;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    display: none;
+    background-color: #fff;
+
+    &__item {
+        padding: 10px 30px;
+        
+        &:not(:last-child) {
+            border-bottom: 1px solid $color_border;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+}
+
+.flexMenu-viewMore {
+    position: relative;
+
+    .more_dropdown {
+        min-width: 200px;
+        left: -12em;
+        padding-top: 20px;
+        background-color: #fff;
+    
+        li {
+            justify-content: flex-start;
+            padding: 10px 15px;
+
+            a {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $color_red;
+            }
+        }
+    
+        li:first-child {
+            border-top: 3px solid #9b0a0a;
+        }
+    
+        li:not(:last-child) {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        li::after {
+            content: none;
+        }
+    }
+}
+
+.icons {
+    @extend %flexible_center;
+
+    &__item {
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+        @extend %flexible_center;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        @extend %flexible_center;
+    }
+
+    .telegram {
+        background-image: url(https://ceh82.ru/media/img/telegram.svg);
+    }
+
+    .viber {
+        background-image: url(https://ceh82.ru/media/img/viber.svg);
+    }
+
+    .watsapp {
+        background-image: url(https://ceh82.ru/media/img/whatsapp.svg);
+    }
+}
+        
+.triangle {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+
+    &::after {
+        content: ''; 
+        position: absolute;
+        border: 5px solid transparent;
+        border-top: 5px solid black;
+        transform: translate(35%, 50%);
+        cursor: pointer;
+    }
+}

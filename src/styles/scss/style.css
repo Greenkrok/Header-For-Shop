@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.header__outer .locality, .header__outer .work-time, .header__outer .phones__item, .header__outer .phones__contacts, .header__outer .account, .header__inner .logo__link, .header__inner .nav__list, .header__inner .nav__item, .header__inner .search-form, .icons, .icons__item, .icons__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container, .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__outer {
+  padding: 8px 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header__outer .flex-container:first-child > * {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.header__outer .flex-container:first-child > *:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__outer .flex-container:last-child > * {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.header__outer .flex-container:last-child > *:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__outer .phones__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.header__outer .phones__number {
+  font-weight: 700;
+}
+
+.header__outer .phones__number:hover {
+  color: #9b0a0a;
+}
+
+.header__outer .phones .dropdown {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header__outer .phones:hover .dropdown {
+  display: block;
+}
+
+.header__outer .phone-order {
+  font-weight: 600;
+  color: #9b0a0a;
+}
+
+.header__outer .account:hover {
+  fill: #9b0a0a;
+  color: #9b0a0a;
+}
+
+.header__inner {
+  padding: 20px;
+}
+
+.header__inner .logo__img {
+  margin-right: 10px;
+}
+
+.header__inner .logo__img .fill0 {
+  fill: #9b0a0a;
+}
+
+.header__inner .logo__slogan {
+  max-width: 170px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #999;
+}
+
+.header__inner .nav {
+  font-weight: 600;
+}
+
+.header__inner .nav__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 550px;
+}
+
+@media (max-width: 1280px) {
+  .header__inner .nav__list {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__inner .nav__list {
+    max-width: 300px;
+  }
+}
+
+.header__inner .nav__item {
+  position: relative;
+  white-space: nowrap;
+}
+
+.header__inner .nav__item:not(:last-child) {
+  margin-right: 26px;
+}
+
+.header__inner .nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #9b0a0a;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header__inner .nav__item.active::after, .header__inner .nav__item:hover::after {
+  width: 100%;
+}
+
+.header__inner .nav__item:hover .dropdown {
+  display: block;
+  padding-top: 20px;
+}
+
+.header__inner .nav__item:hover .dropdown__item:first-child {
+  border-top: 3px solid #9b0a0a;
+}
+
+.header__inner .nav__item:hover .dropdown__link:hover {
+  color: #9b0a0a;
+}
+
+.header__inner .nav .dropdown {
+  left: -12em;
+}
+
+.header__inner .search-form {
+  background-color: #dfdfdf;
+}
+
+.header__inner .search-form__input {
+  padding: 0.5em;
+  border: none;
+  background-color: inherit;
+}
+
+.header__inner .search-form__btn {
+  padding: 0.5em;
+}
+
+.header__inner .icons svg:hover {
+  fill: #9b0a0a;
+}
+
+body, html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+button {
+  font-family: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  display: none;
+  background-color: #fff;
+}
+
+.dropdown__item {
+  padding: 10px 30px;
+}
+
+.dropdown__item:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.dropdown__link {
+  display: block;
+}
+
+.flexMenu-viewMore {
+  position: relative;
+}
+
+.flexMenu-viewMore .more_dropdown {
+  min-width: 200px;
+  left: -12em;
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+.flexMenu-viewMore .more_dropdown li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 15px;
+}
+
+.flexMenu-viewMore .more_dropdown li a {
+  width: 100%;
+}
+
+.flexMenu-viewMore .more_dropdown li:hover {
+  color: #9b0a0a;
+}
+
+.flexMenu-viewMore .more_dropdown li:first-child {
+  border-top: 3px solid #9b0a0a;
+}
+
+.flexMenu-viewMore .more_dropdown li:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.flexMenu-viewMore .more_dropdown li::after {
+  content: none;
+}
+
+.icons__item {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.icons__link {
+  width: 100%;
+  height: 100%;
+}
+
+.icons .telegram {
+  background-image: url(https://ceh82.ru/media/img/telegram.svg);
+}
+
+.icons .viber {
+  background-image: url(https://ceh82.ru/media/img/viber.svg);
+}
+
+.icons .watsapp {
+  background-image: url(https://ceh82.ru/media/img/whatsapp.svg);
+}
+
+.triangle {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.triangle::after {
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+  border-top: 5px solid black;
+  -webkit-transform: translate(35%, 50%);
+          transform: translate(35%, 50%);
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

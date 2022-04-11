@@ -1,0 +1,178 @@
+.header {
+    &__outer {
+        padding: 8px 20px;
+        border-bottom: 1px solid $color_border;
+
+        .flex-container:first-child {
+            > * {
+                font-size: 11px;
+                font-weight: 600;
+
+                &:not(:last-child) {
+                    margin-right: 50px;
+                }
+            }
+        }
+        
+        .flex-container:last-child {
+            > * {
+                font-size: 13px;
+                white-space: nowrap;
+
+                &:not(:last-child) { 
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .locality, .work-time {
+            @extend %flexible_center;
+        }
+
+        .phones {
+            &__item {
+                position: relative;
+                cursor: pointer;
+                @extend %flexible_center;
+            }
+
+            &__contacts {
+                @extend %flexible_center;
+            }
+                        
+            &__number {
+                font-weight: 700;
+
+                &:hover {
+                    color: $color_red;
+                }
+            }
+
+            & .dropdown {
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+            }
+
+            &:hover .dropdown {
+                display: block;
+            }
+        }
+
+        .phone-order {
+            font-weight: 600;
+            color: $color_red;
+        }
+        
+        .account {
+            @extend %flexible_center;
+
+            &:hover {
+                fill: $color_red;
+                color: $color_red;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 20px;
+
+        .logo {
+            &__link {
+                @extend %flexible_center
+            }
+
+            &__img {
+                margin-right: 10px;
+
+                .fill0 {
+                    fill: $color_red;
+                }
+            }
+
+            &__slogan {
+                max-width: 170px;
+                font-size: 11px;
+                line-height: 16px;
+                color: #999;
+            }
+        }
+
+        .nav {
+            font-weight: 600;
+
+            &__list {
+                flex-wrap: wrap;
+                max-width: 550px;
+                @extend %flexible_center;
+
+                @media (max-width: 1280px) {
+                    max-width: 400px;
+                }
+
+                @media (max-width: 1000px) {
+                    max-width: 300px;
+                }
+            }
+
+            &__item {
+                position: relative;
+                white-space: nowrap;
+                @extend %flexible_center;
+
+                &:not(:last-child) {
+                    margin-right: 26px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -23px;
+                    left: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: $color_red;
+                    transition: .3s;
+                }
+
+                &.active::after, &:hover::after {
+                    width: 100%;
+                }
+
+                &:hover .dropdown {
+                    display: block;
+                    padding-top: 20px;
+
+                    &__item:first-child {
+                        border-top: 3px solid $color_red;
+                    }
+
+                    &__link:hover {
+                        color: $color_red;
+                    }
+                }
+            }
+
+            .dropdown {
+                left: -12em;
+            }
+        }
+
+        .search-form {
+            background-color: #dfdfdf;
+            @extend %flexible_center;
+
+            &__input {
+                padding: 0.5em;
+                border: none;
+                background-color: inherit;
+            }
+
+            &__btn {
+                padding: 0.5em;
+            }
+        }
+
+        .icons svg:hover {
+            fill: $color_red;
+        }
+    }
+}

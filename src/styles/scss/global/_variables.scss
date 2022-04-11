@@ -1,0 +1,15 @@
+$color_border: #e8e8e8;
+$color_black: #111;
+$color_red: #9b0a0a;
+
+%flexible_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+%flexible_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
