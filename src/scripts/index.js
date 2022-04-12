@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(window).load(function(){
   $('ul.nav__list').flexMenu({
       linkText: "...",
       linkTitle: "Показать еще",

@@ -39,7 +39,6 @@
 
 .header__outer .flex-container:last-child > * {
   font-size: 13px;
-  white-space: nowrap;
 }
 
 .header__outer .flex-container:last-child > *:not(:last-child) {
@@ -53,6 +52,7 @@
 
 .header__outer .phones__number {
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .header__outer .phones__number:hover {
@@ -86,6 +86,14 @@
   margin-right: 10px;
 }
 
+.header__inner .logo__img svg {
+  min-width: 100px;
+  max-width: 300px;
+  min-height: 100px;
+  max-height: 300px;
+  fill-rule: evenodd;
+}
+
 .header__inner .logo__img .fill0 {
   fill: #9b0a0a;
 }
@@ -98,13 +106,14 @@
 }
 
 .header__inner .nav {
+  margin: 0 10px;
   font-weight: 600;
 }
 
 .header__inner .nav__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 550px;
+  max-width: 500px;
 }
 
 @media (max-width: 1280px) {
@@ -210,7 +219,7 @@ svg {
 }
 
 .dropdown__item {
-  padding: 10px 30px;
+  padding: 15px;
 }
 
 .dropdown__item:not(:last-child) {
@@ -226,7 +235,7 @@ svg {
 }
 
 .flexMenu-viewMore .more_dropdown {
-  min-width: 200px;
+  min-width: 220px;
   left: -12em;
   padding-top: 20px;
   background-color: #fff;

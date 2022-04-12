@@ -17,7 +17,6 @@
         .flex-container:last-child {
             > * {
                 font-size: 13px;
-                white-space: nowrap;
 
                 &:not(:last-child) { 
                     margin-right: 30px;
@@ -42,6 +41,7 @@
                         
             &__number {
                 font-weight: 700;
+                white-space: nowrap;
 
                 &:hover {
                     color: $color_red;
@@ -83,6 +83,14 @@
             &__img {
                 margin-right: 10px;
 
+                svg {
+                    min-width: 100px;
+                    max-width: 300px;
+                    min-height: 100px;
+                    max-height: 300px;
+                    fill-rule: evenodd;
+                }
+
                 .fill0 {
                     fill: $color_red;
                 }
@@ -97,11 +105,12 @@
         }
 
         .nav {
+            margin: 0 10px;
             font-weight: 600;
 
             &__list {
                 flex-wrap: wrap;
-                max-width: 550px;
+                max-width: 500px;
                 @extend %flexible_center;
 
                 @media (max-width: 1280px) {

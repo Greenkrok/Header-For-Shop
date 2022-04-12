@@ -37,7 +37,7 @@ svg {
     background-color: #fff;
 
     &__item {
-        padding: 10px 30px;
+        padding: 15px;
         
         &:not(:last-child) {
             border-bottom: 1px solid $color_border;
@@ -53,7 +53,7 @@ svg {
     position: relative;
 
     .more_dropdown {
-        min-width: 200px;
+        min-width: 220px;
         left: -12em;
         padding-top: 20px;
         background-color: #fff;
