@@ -1,7 +1,5 @@
 # <a href="https://greenkrok.github.io/Header-For-Shop/"> Watch here </a>
 
-Тестовое задание DessitesBY
-
 Задача:
 1. Сверстать шапку сайта https://shop.ds2.by/.
 2. Все иконки в SVG (набор fontawesome 4.7, material icons или linearicons).
